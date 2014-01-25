@@ -12,11 +12,9 @@ For this system to run, you need a MySQL database. In the <code>database</code> 
 <code>
 	<?php
 	// database connection settings
-
 	define('DB_HOST', 'localhost');
 	define('DB_USER', 'root');
 	define('DB_PASS', 'pass');
 	define('DB_DATABASE', 'vote');
-
 	?>
 </code>
