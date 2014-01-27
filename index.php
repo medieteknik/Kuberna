@@ -2,10 +2,11 @@
 // we require login!
 define('REQIRE_LOGIN', true);
 
+// load system
 require_once 'system.php';
 
+// get nominee data
 $datafile = file_get_contents('data/nominees.json');
-
 $data = json_decode($datafile);
 ?>
 <!DOCTYPE html>
