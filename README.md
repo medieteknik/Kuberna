@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `votes` (
 ### License
 The MIT License (MIT)
 
-Copyright (c) 2014 (<a href="graphs/contributors">The ones who contributed to this repo.</a>)
+Copyright (c) 2014 (<a href="https://github.com/klaseskilson/cloaked-octo-hipster/graphs/contributors">The ones who contributed to this repo.</a>)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
