@@ -60,11 +60,13 @@ $data = json_decode($datafile, true);
 			</div>
 			<div class="row">
 				<div class="col-sm-12">
+					<h2>
 						Grå kuben
 						<small>
 							<?php echo nicenumber(sizeof($data['gray']), 'en'); ?>
 							nominera<?php echo sizeof($data['gray']) == 1 ? 'd' : 'de'; ?>
 						</small>
+					</h2>
 				</div>
 			</div>
 			<?php

@@ -6,7 +6,7 @@ Cloaked Octo Hipster is a simple voting system that isn't using any known system
 This'll be gooood
 
 
-### Installation
+## Installation
 For this system to run, you need a MySQL database. In the <code>database</code> folder, add a new file called <code>config.php</code> add the following to it:
 
 ```
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `votes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 ```
 
-### License
+## License
 The MIT License (MIT)
 
 Copyright (c) 2014 (<a href="https://github.com/klaseskilson/cloaked-octo-hipster/graphs/contributors">The ones who contributed to this repo.</a>)
