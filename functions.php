@@ -74,3 +74,58 @@ function do_dump(&$var, $var_name = NULL, $indent = NULL, $reference = NULL)
 
     echo "</div>";
 }
+
+/**
+ * returns the correct text representation of a number
+ * @param  int $number the number
+ * @param string $one  ett or en?
+ * @return mixed       the text representation
+ */
+function nicenumber($number, $one = 'ett')
+{
+    switch($number)
+    {
+        case '0':
+            return 'noll';
+        break;
+        case '1':
+            return $one;
+        break;
+        case '2':
+            return 'två';
+        break;
+        case '3':
+            return 'tre';
+        break;
+        case '4':
+            return 'fyra';
+        break;
+        case '5':
+            return 'fem';
+        break;
+        case '6':
+            return 'sex';
+        break;
+        case '7':
+            return 'sju';
+        break;
+        case '8':
+            return 'åtta';
+        break;
+        case '9':
+            return 'nio';
+        break;
+        case '10':
+            return 'tio';
+        break;
+        case '11':
+            return 'elva';
+        break;
+        case '12':
+            return 'tolv';
+        break;
+        default:
+            return $number;
+        break;
+    }
+}

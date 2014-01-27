@@ -1,2 +1,4 @@
 # ignore database config
 database/config.php
+# ignore cas log
+phpCAS.log
