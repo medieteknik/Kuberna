@@ -1,0 +1,61 @@
+// mixins
+.rotation(@rot: -10deg) {
+	-webkit-transform: rotate(@rot);
+		-ms-transform: rotate(@rot);
+			transform: rotate(@rot);
+}
+
+/*
+	Typsnitt
+*/
+@font-face {
+	font-family: 'OpenSansExtraboldItalic';
+	font-style: normal;
+	font-weight: 400;
+    src: url('../font/OpenSans-ExtraboldItalic.eot');
+    src: url('../font/OpenSans-ExtraboldItalic.eot') format('embedded-opentype'),
+         url('../font/OpenSans-ExtraboldItalic.woff') format('woff'),
+         url('../font/OpenSans-ExtraboldItalic.ttf') format('truetype'),
+         url('../font/OpenSans-ExtraboldItalic.svg#OpenSansRegular') format('svg');
+}
+/*
+font-fix
+om du någonsin fastnar med fula typsnitt i chrome på windows, läs detta (och skit i google
+web fonts):
+http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	@font-face {
+		font-family: 'OpenSansExtraboldItalic';
+		src: url('../font/OpenSans-ExtraboldItalic.svg#OpenSans') format('svg') !important;
+	}
+}
+
+h1, h2 {
+	text-align: center;
+	font-family: 'OpenSansExtraboldItalic';
+	text-transform: uppercase;
+	padding: 100px 0;
+
+	.rotation(-12deg);
+
+	small {
+		color: rgba(0,0,0,0.3);
+	}
+}
+
+.title {
+	color: #fff;
+	overflow: hidden;
+	margin: 20px 0;
+
+	&#gray {
+		background-color: #A6A6A6;
+	}
+	&#orange {
+		background-color: #FF7D00;
+	}
+	&#black {
+		background-color: #000;
+	}
+}

@@ -26,13 +26,10 @@ $data = json_decode($datafile, true);
 
 		<!-- CSS files -->
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" />
+        <link rel="stylesheet/less" type="text/css" href="web/css/style.less" />
 
-		<style>
-		body {
-		}
-		h1, h2 {
-		}
-		</style>
+        <!-- load less -->
+        <script src="web/js/less.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<!--[if lt IE 7]>
@@ -46,7 +43,7 @@ $data = json_decode($datafile, true);
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-12">
+				<div class="col-sm-6 col-sm-offset-3">
 					<p>
 						Kuberna är ett årligt tvådelat pris som delas ut till studenter vid
 						Civilingenjör i medieteknik-programmet på Linköpings Universitet.
@@ -58,23 +55,27 @@ $data = json_decode($datafile, true);
 					</p>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-sm-12">
-					<h2>
-						Grå kuben
-						<small>
-							<?php echo nicenumber(sizeof($data['gray']), 'en'); ?>
-							nominera<?php echo sizeof($data['gray']) == 1 ? 'd' : 'de'; ?>
-						</small>
-					</h2>
-				</div>
-			</div>
+        </div><!-- end .container -->
+
+		<div class="title" id="gray">
+			<h2>
+				Grå kuben<br />
+				<small>
+					<?php echo nicenumber(sizeof($data['gray']), 'en'); ?>
+					nominera<?php echo sizeof($data['gray']) == 1 ? 'd' : 'de'; ?>
+				</small>
+			</h2>
+		</div>
+
+        <div class="container">
 			<?php
+			$i = 0;
+
 			foreach($data['gray'] as $nominee)
 			{
 				?>
 				<div class="row">
-					<div class="col-sm-8 col-sm-offset-4">
+					<div class="col-sm-8 <?php echo $i % 2 == 0 ? '' : 'col-sm-offset-4'; ?>">
 						<h3>
 							<?php echo $nominee['name']; ?>
 							<small>
@@ -84,12 +85,12 @@ $data = json_decode($datafile, true);
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-4">
+					<div class="col-sm-4<?php echo $i % 2 == 0 ? ' col-md-push-8' : ''; ?>">
 						<img src="data/img/<?php echo $nominee['id']; ?>.jpg"
 							 alt="<?php echo $nominee['name']; ?>"
 							 class="img-responsive">
 					</div>
-					<div class="col-sm-8">
+					<div class="col-sm-8<?php echo $i % 2 == 0 ? ' col-md-pull-4' : ''; ?>">
 						<p>
 							<?php echo $nominee['nomination']; ?>
 						</p>
@@ -99,26 +100,29 @@ $data = json_decode($datafile, true);
 					</div>
 				</div>
 				<?php
+				$i++;
 			}
 			?>
+        </div><!-- end .container -->
 
-			<div class="row">
-				<div class="col-sm-12">
-					<h2>
-						Orange kuben
-						<small>
-							<?php echo nicenumber(sizeof($data['orange']), 'en'); ?>
-							nominera<?php echo sizeof($data['orange']) == 1 ? 'd' : 'de'; ?>
-						</small>
-					</h2>
-				</div>
-			</div>
+		<div class="title" id="orange">
+			<h2 id="orange">
+				Orange kuben<br />
+				<small>
+					<?php echo nicenumber(sizeof($data['orange']), 'en'); ?>
+					nominera<?php echo sizeof($data['orange']) == 1 ? 'd' : 'de'; ?>
+				</small>
+			</h2>
+		</div>
+
+        <div class="container">
 			<?php
+			$i = 1;
 			foreach($data['orange'] as $nominee)
 			{
 				?>
 				<div class="row">
-					<div class="col-sm-8 col-sm-offset-4">
+					<div class="col-sm-8 <?php echo $i % 2 == 0 ? '' : 'col-sm-offset-4'; ?>">
 						<h3>
 							<?php echo $nominee['name']; ?>
 							<small>
@@ -128,12 +132,12 @@ $data = json_decode($datafile, true);
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-4">
+					<div class="col-sm-4<?php echo $i % 2 == 0 ? ' col-md-push-8' : ''; ?>">
 						<img src="data/img/<?php echo $nominee['id']; ?>.jpg"
 							 alt="<?php echo $nominee['name']; ?>"
 							 class="img-responsive">
 					</div>
-					<div class="col-sm-8">
+					<div class="col-sm-8<?php echo $i % 2 == 0 ? ' col-md-pull-4' : ''; ?>">
 						<p>
 							<?php echo $nominee['nomination']; ?>
 						</p>
@@ -143,11 +147,19 @@ $data = json_decode($datafile, true);
 					</div>
 				</div>
 				<?php
+				$i++;
 			}
 			?>
+
+        </div><!-- end .container -->
+
+		<div class="title" id="black">
 			<h2>
 				Rösta
 			</h2>
+		</div>
+
+        <div class="container">
 			<?php
 				if(!phpCAS::isAuthenticated())
 				{
