@@ -5,7 +5,7 @@ require_once 'cas_config.php';
 require_once $phpcas_path . '/CAS.php';
 
 // Uncomment to enable debugging
-phpCAS::setDebug();
+// phpCAS::setDebug();
 
 // Initialize phpCAS
 phpCAS::client(CAS_VERSION_2_0, $cas_host, $cas_port, $cas_context);
@@ -20,13 +20,14 @@ phpCAS::client(CAS_VERSION_2_0, $cas_host, $cas_port, $cas_context);
 phpCAS::setNoCasServerValidation();
 
 // force CAS authentication
-if (isset($_REQUEST['login'])) {
+if (isset($_GET['login']) || pathinfo($_SERVER['SCRIPT_NAME'], PATHINFO_FILENAME) !== 'index')
+{
 	phpCAS::forceAuthentication();
 }
 // at this step, the user has been authenticated by the CAS server
 // and the user's login name can be read with phpCAS::getUser().
 
 // logout if desired
-if (isset($_REQUEST['logout'])) {
+if (isset($_GET['logout'])) {
 	phpCAS::logout();
 }

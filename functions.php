@@ -129,3 +129,29 @@ function nicenumber($number, $one = 'ett')
         break;
     }
 }
+
+function has_voted($user, $link)
+{
+    // escape string
+    $user = $link->escape_string($user);
+
+    // get data
+    $result = $link->query("SELECT * FROM votes WHERE liuid='$user' LIMIT 1");
+
+    if($result && $result->num_rows > 0)
+        return $result->fetch_array(MYSQLI_ASSOC);
+
+    return false;
+}
+
+/**
+ * nice extension of the array_search function from
+ * http://stackoverflow.com/questions/855553/get-index-of-element-in-an-array-by-the-value
+ */
+function array_search2d($needle, $haystack) {
+    for ($i = 0, $l = count($haystack); $i < $l; ++$i) {
+        if (in_array($needle, $haystack[$i]))
+            return $i;
+    }
+    return false;
+}

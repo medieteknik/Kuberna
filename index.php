@@ -1,6 +1,6 @@
 <?php
 // we require login!
-define('REQIRE_LOGIN', true);
+define('REQUIRE_LOGIN', true);
 
 // load system
 require_once 'system.php';
@@ -25,11 +25,11 @@ $data = json_decode($datafile, true);
 		<meta http-equiv="cleartype" content="on">
 
 		<!-- CSS files -->
-		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" />
-        <link rel="stylesheet/less" type="text/css" href="web/css/style.less" />
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" />
+		<link rel="stylesheet/less" type="text/css" href="web/css/style.less" />
 
-        <!-- load less -->
-        <script src="web/js/less.js" type="text/javascript"></script>
+		<!-- load less -->
+		<script src="web/js/less.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<!--[if lt IE 7]>
@@ -55,7 +55,7 @@ $data = json_decode($datafile, true);
 					</p>
 				</div>
 			</div>
-        </div><!-- end .container -->
+		</div><!-- end .container -->
 
 		<div class="title" id="gray">
 			<h2>
@@ -67,7 +67,7 @@ $data = json_decode($datafile, true);
 			</h2>
 		</div>
 
-        <div class="container">
+		<div class="container">
 			<?php
 			$i = 0;
 
@@ -85,12 +85,12 @@ $data = json_decode($datafile, true);
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-4<?php echo $i % 2 == 0 ? ' col-md-push-8' : ''; ?>">
+					<div class="col-sm-4<?php echo $i % 2 == 0 ? ' col-sm-push-8' : ''; ?>">
 						<img src="data/img/<?php echo $nominee['id']; ?>.jpg"
 							 alt="<?php echo $nominee['name']; ?>"
 							 class="img-responsive">
 					</div>
-					<div class="col-sm-8<?php echo $i % 2 == 0 ? ' col-md-pull-4' : ''; ?>">
+					<div class="col-sm-8<?php echo $i % 2 == 0 ? ' col-sm-pull-4' : ''; ?>">
 						<p>
 							<?php echo $nominee['nomination']; ?>
 						</p>
@@ -103,7 +103,7 @@ $data = json_decode($datafile, true);
 				$i++;
 			}
 			?>
-        </div><!-- end .container -->
+		</div><!-- end .container -->
 
 		<div class="title" id="orange">
 			<h2 id="orange">
@@ -115,7 +115,7 @@ $data = json_decode($datafile, true);
 			</h2>
 		</div>
 
-        <div class="container">
+		<div class="container">
 			<?php
 			$i = 1;
 			foreach($data['orange'] as $nominee)
@@ -132,12 +132,12 @@ $data = json_decode($datafile, true);
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-sm-4<?php echo $i % 2 == 0 ? ' col-md-push-8' : ''; ?>">
+					<div class="col-sm-4<?php echo $i % 2 == 0 ? ' col-sm-push-8' : ''; ?>">
 						<img src="data/img/<?php echo $nominee['id']; ?>.jpg"
 							 alt="<?php echo $nominee['name']; ?>"
 							 class="img-responsive">
 					</div>
-					<div class="col-sm-8<?php echo $i % 2 == 0 ? ' col-md-pull-4' : ''; ?>">
+					<div class="col-sm-8<?php echo $i % 2 == 0 ? ' col-sm-pull-4' : ''; ?>">
 						<p>
 							<?php echo $nominee['nomination']; ?>
 						</p>
@@ -151,27 +151,68 @@ $data = json_decode($datafile, true);
 			}
 			?>
 
-        </div><!-- end .container -->
+		</div><!-- end .container -->
 
-		<div class="title" id="black">
-			<h2>
-				Rösta
-			</h2>
-		</div>
+		<?php
+			if(!phpCAS::isAuthenticated()) // logged in?
+			{
+				?>
+				<div class="title" id="black">
+					<h2>
+						Rösta!<br />
+						<small>
+							Först måste du <a href="?login" class="btn btn-info">Logga in!</a>
+						</small>
+					</h2>
+				</div>
+				<?php
+			}
+			elseif($votes = has_voted(phpCAS::getUser(), $sysdb)) // has voted?
+			{
+				?>
+				<div class="title" id="black">
+					<h2>
+						Tack för din röst!<br />
+						<small>
+							Du röstade på
+							<?php
+							// find the correct nominee indices for the votes
+							$grayindex = array_search2d($votes['gray'], $data['gray']);
+							$orangeindex = array_search2d($votes['orange'], $data['orange']);
 
-        <div class="container">
-			<?php
-				if(!phpCAS::isAuthenticated())
-				{
-					echo '<p><a href="?login" class="btn btn-info">Logga in med ditt LiU-id!</a> Du måste logga in för att kunna rösta.</p>';
-				}
-				else
-				{
-					?>
-					<p>
-						<a href="?logout" class="btn btn-info">Logga ut!</a>
-						Du är inloggad som <strong><?php echo phpCAS::getUser(); ?></strong>.
-					</p>
+							// should we print out the gray vote?
+							if($grayindex !== FALSE)
+								echo $data['gray'][$grayindex]['name'];
+							// no blank votes?
+							if($grayindex !== FALSE && $orangeindex !== FALSE)
+								echo ' och ';
+							// orange vote?
+							if($orangeindex !== FALSE)
+								echo $data['orange'][$orangeindex]['name'];
+
+							// tell the user about the double blank vote
+							if($grayindex === FALSE && $orangeindex === FALSE)
+								echo ' blanka alternativ enbart!'
+							?>
+							<br />
+							<a href="?logout" class="btn btn-info">Logga ut!</a>
+						</small>
+					</h2>
+				</div>
+				<?php
+			}
+			else
+			{
+				?>
+				<div class="title" id="black">
+					<h2>
+						Rösta nu!<br />
+						<small>
+							Inloggad som <?php echo phpCAS::getUser(); ?> <a href="?logout" class="btn btn-info">Logga ut!</a>
+						</small>
+					</h2>
+				</div>
+				<div class="container">
 					<form action="vote.php" method="post">
 						<div class="row">
 							<div class="col-sm-4">
@@ -253,12 +294,9 @@ $data = json_decode($datafile, true);
 							</div>
 						</div>
 					</form>
-					<?php
-				} // else phpcas auth check
-			?>
+				</div><!-- end .container -->
 			<?php
-			// do_dump($data);
+			} // else phpcas auth check
 			?>
-		</div><!-- end .container -->
 	</body>
 </html>

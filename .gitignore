@@ -2,3 +2,5 @@
 database/config.php
 # ignore cas log
 phpCAS.log
+# dat osx thing. lovely, don't you think?
+*.DS_Store
