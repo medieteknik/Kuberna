@@ -298,5 +298,25 @@ $data = json_decode($datafile, true);
 			<?php
 			} // else phpcas auth check
 			?>
+			<div class="container">
+				<div class="row margin">
+					<div class="col-sm-4 col-sm-offset-4
+								col-md-2 col-md-offset-5
+								col-xs-6 col-xs-offset-3">
+						<a href="http://medieteknik.nu">
+							<img src="web/img/mt.png" alt="Civilingenjör i Medieteknik" class="img-responsive">
+						</a>
+					</div>
+				</div>
+				<div class="row margin">
+					<div class="col-sm-4 col-sm-offset-4">
+						<p class="text-center text-muted">
+							Frågor? Kontaka oss på <a href="mailto:styrelsen@medieteknik.nu" target="_blank">styrelsen@medieteknik.nu</a>.
+							· Se koden på
+							<a href="https://github.com/medieteknik/kuberna/"title="Se koden på GitHub" target="_blank">GitHub</a>.
+						</p>
+					</div>
+				</div>
+			</div>
 	</body>
 </html>
