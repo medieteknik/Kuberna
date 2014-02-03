@@ -1,7 +1,7 @@
-cloaked-octo-hipster
+Kuberna
 ====================
 
-Cloaked Octo Hipster is a simple voting system that isn't using any known system layout. In other words, the code is messy.
+Kuberna, previously known as Cloaked Octo Hipster, is a simple voting system that isn't using any known system layout. In other words, the code is messy.
 
 This'll be gooood
 
@@ -36,10 +36,13 @@ CREATE TABLE IF NOT EXISTS `votes` (
 ) ENGINE=InnoDB DEFAULT CHARSET=UTF8;
 ```
 
+### Setup
+Add the nominees to the <code>nominees.json</code>-file found in the <code>data</code> folder.
+
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2014 (<a href="https://github.com/klaseskilson/cloaked-octo-hipster/graphs/contributors">The ones who contributed to this repo.</a>)
+Copyright (c) 2014 (<a href="https://github.com/medieteknik/kuberna/graphs/contributors">The ones who contributed to this repo.</a>)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
