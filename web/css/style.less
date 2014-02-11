@@ -7,28 +7,20 @@
 
 /*
 	Typsnitt
+
+om du någonsin fastnar med fula typsnitt i chrome på windows, läs detta (och skit i google
+web fonts):
+http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
 */
 @font-face {
 	font-family: 'OpenSansExtraboldItalic';
 	font-style: normal;
 	font-weight: 400;
     src: url('../font/OpenSans-ExtraboldItalic.eot');
-    src: url('../font/OpenSans-ExtraboldItalic.eot') format('embedded-opentype'),
+    src: url('../font/OpenSans-ExtraboldItalic.eot?#iefix') format('eot'),
+         url('../font/OpenSans-ExtraboldItalic.svg') format('svg'),
          url('../font/OpenSans-ExtraboldItalic.woff') format('woff'),
-         url('../font/OpenSans-ExtraboldItalic.ttf') format('truetype'),
-         url('../font/OpenSans-ExtraboldItalic.svg#OpenSansRegular') format('svg');
-}
-/*
-font-fix
-om du någonsin fastnar med fula typsnitt i chrome på windows, läs detta (och skit i google
-web fonts):
-http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
-*/
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-	@font-face {
-		font-family: 'OpenSansExtraboldItalic';
-		src: url('../font/OpenSans-ExtraboldItalic.svg#OpenSans') format('svg') !important;
-	}
+         url('../font/OpenSans-ExtraboldItalic.ttf') format('truetype');
 }
 
 body {
@@ -71,4 +63,13 @@ h1, h2 {
 
 .margin {
 	margin: 30px 0;
+}
+
+.nominees {
+	.row {
+		margin-top: 20px;
+	}
+	img {
+		margin-top: 20px;
+	}
 }

@@ -67,7 +67,7 @@ $data = json_decode($datafile, true);
 			</h2>
 		</div>
 
-		<div class="container">
+		<div class="container nominees">
 			<?php
 			$i = 0;
 
@@ -75,28 +75,35 @@ $data = json_decode($datafile, true);
 			{
 				?>
 				<div class="row">
-					<div class="col-sm-8 <?php echo $i % 2 == 0 ? '' : 'col-sm-offset-4'; ?>">
-						<h3>
-							<?php echo $nominee['name']; ?>
-							<small>
-								<?php echo $nominee['type']; ?> av <?php echo $nominee['who']; ?>
-							</small>
-						</h3>
-					</div>
-				</div>
-				<div class="row">
 					<div class="col-sm-4<?php echo $i % 2 == 0 ? ' col-sm-push-8' : ''; ?>">
 						<img src="data/img/<?php echo $nominee['id']; ?>.jpg"
 							 alt="<?php echo $nominee['name']; ?>"
 							 class="img-responsive">
 					</div>
 					<div class="col-sm-8<?php echo $i % 2 == 0 ? ' col-sm-pull-4' : ''; ?>">
+						<h3>
+							<?php echo $nominee['name']; ?>
+							<small>
+								<?php echo $nominee['type']; ?> av <?php echo $nominee['who']; ?>
+							</small>
+						</h3>
 						<p>
 							<?php echo $nominee['nomination']; ?>
 						</p>
-						<h4>
-							<a href="<?php echo $nominee['link']; ?>" target="_blank">Mer info!</a>
-						</h4>
+						<?php
+						if(!empty($nominee['link']))
+						{
+							?>
+							<h4>
+								<a href="<?php echo $nominee['link']; ?>" target="_blank">
+									<?php
+									echo empty($nominee['linktext']) ? 'Mer info' : $nominee['linktext'];
+									?>
+								</a>
+							</h4>
+							<?php
+						}
+						?>
 					</div>
 				</div>
 				<?php
@@ -115,22 +122,12 @@ $data = json_decode($datafile, true);
 			</h2>
 		</div>
 
-		<div class="container">
+		<div class="container nominees">
 			<?php
 			$i = 1;
 			foreach($data['orange'] as $nominee)
 			{
 				?>
-				<div class="row">
-					<div class="col-sm-8 <?php echo $i % 2 == 0 ? '' : 'col-sm-offset-4'; ?>">
-						<h3>
-							<?php echo $nominee['name']; ?>
-							<small>
-								<?php echo $nominee['type']; ?> av <?php echo $nominee['who']; ?>
-							</small>
-						</h3>
-					</div>
-				</div>
 				<div class="row">
 					<div class="col-sm-4<?php echo $i % 2 == 0 ? ' col-sm-push-8' : ''; ?>">
 						<img src="data/img/<?php echo $nominee['id']; ?>.jpg"
@@ -138,12 +135,29 @@ $data = json_decode($datafile, true);
 							 class="img-responsive">
 					</div>
 					<div class="col-sm-8<?php echo $i % 2 == 0 ? ' col-sm-pull-4' : ''; ?>">
+						<h3>
+							<?php echo $nominee['name']; ?>
+							<small>
+								<?php echo $nominee['type']; ?> av <?php echo $nominee['who']; ?>
+							</small>
+						</h3>
 						<p>
 							<?php echo $nominee['nomination']; ?>
 						</p>
-						<h4>
-							<a href="<?php echo $nominee['link']; ?>" target="_blank">Mer info!</a>
-						</h4>
+						<?php
+						if(!empty($nominee['link']))
+						{
+							?>
+							<h4>
+								<a href="<?php echo $nominee['link']; ?>" target="_blank">
+									<?php
+									echo empty($nominee['linktext']) ? 'Mer info' : $nominee['linktext'];
+									?>
+								</a>
+							</h4>
+							<?php
+						}
+						?>
 					</div>
 				</div>
 				<?php
@@ -161,7 +175,7 @@ $data = json_decode($datafile, true);
 					<h2>
 						Rösta!<br />
 						<small>
-							Först måste du <a href="?login" class="btn btn-info">Logga in!</a>
+							Först måste du <a href="?login#black" class="btn btn-info">Logga in!</a>
 						</small>
 					</h2>
 				</div>
