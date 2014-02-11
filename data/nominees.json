@@ -9,29 +9,77 @@
 			"nomination":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 		},
 		{
-			"name":"Atlas",
-			"type":"Kartspel",
-			"who":"dudes and dudettes",
-			"id":"atlas",
-			"link":"http://kartlas.se",
-			"nomination":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+			"name":"Physically based simulation of fire",
+			"type":"Eldsimulering",
+			"who":"Andreas Valter, Axel Kinner, Johan Norén, Johannes Deligiannis, Viktor Nilsson",
+			"id":"eldsim",
+			"link":"http://www.youtube.com/watch?v=F40_rowaLQg",
+			"nomination":"I projektet har matematiska och fysiska modeller implementerats i C++ för att simulera hur eld beter sig i verkligheten. Eftersom modellerna som använts är riktiga matematiska och fysiska modeller så kan man skapa olika typer av lågor och eldar genom att ändra och tweaka verkliga variabler. Om man i simuleringen t.ex matar in en bränsledensitet och antändningstemperatur som överensstämmer med metangas så kommer den simulerade lågan att röra sig och se ut ungefär som en låga på metangas hade gjort i verkligheten. "
+		},
+		{
+			"name":"SGCTSky",
+			"type":"Molnsimulering för domen",
+			"who":"Fredrik Lindner, Aron Tornberg, Sebastian Piwell",
+			"id":"sgctsky",
+			"link":"https://docs.google.com/file/d/0BzjBHmpNGNxGT3V5dktYakw1RVU/",
+			"linktext":"Se en film",
+			"nomination":"SGCTSky är en realtids-atmosfär-och-moln-simulator som är gjord för att visas på Domen i Visualiseringscenter. SGCTSky utvecklades i samband med kursen TNM061 (3D Datorgrafik) som vi läste vårterminen i årskurs 2. SGCTSky gör det alltså möjligt att visa en himmel (natt och dag) med moln i fullt interaktiva hastigheter på Domen."
+		},
+		{
+			"name":"Spökljus",
+			"type":"Multiplayer-spel och spelmotor",
+			"who":"Kalle Bladin, Erik Broberg, Tim Brodin, Måns Bränneby, Martin Gråd",
+			"id":"spokljus",
+			"link":"http://www.youtube.com/watch?v=wSeQsk_Lvp0",
+			"linktext":"Se en film",
+			"nomination":"Som projektarbete i kursen TNM061 (3D-datorgrafik) gjorde vi ett multiplayer-spel och en egen spelmotor. Varje spelar är ett spöke med en yxa och en ficklampa, och tillsammans med sitt lag utforskar man en mörk miljö för att hitta det andra laget som man sedan ska fightas mot. Fokus lades på själva spelmotorn, vilken inkluderar en egen scengraf och beräkning kastskuggor för varje ljuskälla. En höjdmap användes för att ge spelarna en korrekt höjdposition och för att detektera kollision med väggar och dylikt. För att kunna ladda in en godtycklig spelplan/bana, implementerades en algoritm för att generera denna höjdmap automatiskt utifrån den 3D-modell som beskriver banan. "
+		},
+		{
+			"name":"Tube Wars",
+			"type":"FPS-shooter",
+			"who":"Alexander Cederblad, Philip Burridge , Rasmus Haapaoja, Fredrik Johnson , Hannes Ingelhag",
+			"id":"tubewars",
+			"link":"https://drive.google.com/a/student.liu.se/file/d/0B3Kzaau-27NqNk94MGhENXR0bkk/edit?usp=sharing",
+			"linktext":"Se en film",
+			"nomination":"Tube Wars är en fps-shooter där man spelar 2 vs. 2 på en kompakt och högintensiv arena. Spelet är skapat i Unity Engine. Alla modeller, texturer, ljud (utom ambient-ljudet), partikeleffekter samt närverket har vi skapat själva. Detta är ett projekt som knyter samman medieteknikprogrammet på ett bra sätt då allt ifrån programmering, förståelse för en grafikmotor samt konstnärligt artistisk anda är ett måste!"
+		},
+		{
+			"name":"Mote.fm",
+			"type":"Webb- och Spotifyapp",
+			"type":"Webb- och Spotifyapp",
+			"who":"Klas Eskilson, Erik Larsson, Daniel Rönnkvist, Einar Sandberg",
+			"id":"mote",
+			"link":"https://vimeo.com/86263314",
+			"linktext":"Se en film",
+			"nomination":"Mote.fm är en webb- och Spotify-app för att lösa konflikter som uppstår på fester runt vilken musik som skall ligga i spotifys kölista. Genom att flytta väljandet av musik till handhållna enheter behöver ingen brottas framför datorn och ingen kan fuska genom att lägga sin egna låt först. Tillsammans kan gästerna föreslå och rösta på vilka låtar de helst vill höra. Med Mote.fm har du tillgång och kan söka i hela Spotifys musikbibliotek. När du lägger till en låt eller röstar på någon annans låt uppdateras Mote.fm automatiskt utan att du som användare måste uppdatera hemsidan."
 		}
 	],
 	"orange": [
 		{
+			"name":"Grizzly Beer",
+			"type":"Reklamfilm",
+			"who":"Alexander Johansson, Belinda Bernfort, Rasmus Karlsson, Hans­Christian Helltegen, Gustav Lagnström, Viktor Axelsson",
+			"id":"grizzly",
+			"link":"http://www.youtube.com/watch?v=JyqW4IS2SAw",
+			"linktext":"Se filmen",
+			"nomination":"En reklamfilm utöver det vanliga med inspiration från påkostade reklamfilmer så som Coca Cola Zero och Old Spice. I filmen får man se hur en tämligen huslig man börjar drömma sig bort till en mer spänningsfylld tillvaro, med inslag av armbrytning, björnjakt och explosioner. Detta gör honom sugen på en Grizzly Beer och när denna inmundigas sker en fantastisk transformation."
+		},
+		{
 			"name":"Growth",
 			"type":"Kortilm",
-			"who":"dudes and dudes",
+			"who":"Adam Alsegård, Benjamin Wiberg, Oscar Nord, Adrian Palmqvist",
 			"id":"growth",
-			"link":"http://growth.se",
-			"nomination":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+			"link":"http://growthmovie.se",
+			"linktext":"Se filmen",
+			"nomination":"Growth är en science fiction-kortfilm som utspelar sig i en nära framtid där all växtlighet har förmultnat och tillgången på mat är obefintlig. Folket tvingas förlita sig på företaget Growth, som med sitt syntetiska matsubstitut har fått monopol på näringsmarknaden. Alla är dock inte eniga om att hoppet om en fri marknad har dött ut..."
 		},
 		{
 			"name":"Rob's vengeance",
 			"type":"Animerad kortfilm",
-			"who":"dudes and dudettes",
+			"who":"Filip Kantedal, David Johansson, Lovisa Hassler, Simon Hedlund, Sovanny Huy Nikkilä",
 			"id":"robsven",
 			"link":"http://www.youtube.com/watch?v=Hiiruh8nHKQ",
+			"linktext":"Se filmen",
 			"nomination":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 		}
 
