@@ -95,7 +95,7 @@ function has_voted($user, $link)
     $user = $link->escape_string($user);
 
     // get data
-    $result = $link->query("SELECT * FROM votes WHERE liuid='$user' LIMIT 1");
+    $result = $link->query("SELECT * FROM votes WHERE liuid='$user' LIMIT 1") or die('Something went wrong. Contact styrelsen@medieteknik.nu please.');
 
     if($result && $result->num_rows > 0)
         return $result->fetch_array(MYSQLI_ASSOC);

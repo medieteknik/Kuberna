@@ -4,6 +4,8 @@ define('REQUIRE_LOGIN', true);
 
 // load system
 require_once 'system.php';
+// load the vote handler
+require_once 'vote.php';
 
 // get nominee data
 $datafile = file_get_contents('data/nominees.json');
@@ -188,7 +190,7 @@ $data = json_decode($datafile, true);
 					<h2>
 						Tack för din röst!<br />
 						<small>
-							Du röstade på
+							Inloggad som <?php echo phpCAS::getUser(); ?>. Du röstade på
 							<?php
 							// find the correct nominee indices for the votes
 							$grayindex = array_search2d($votes['gray'], $data['gray']);
@@ -227,7 +229,7 @@ $data = json_decode($datafile, true);
 					</h2>
 				</div>
 				<div class="container">
-					<form action="vote.php" method="post">
+					<form action="./" method="post">
 						<div class="row">
 							<div class="col-sm-4">
 								<h3>
@@ -343,3 +345,5 @@ $data = json_decode($datafile, true);
 		</script>
 	</body>
 </html>
+
+<?php $sysdb->close(); ?>
