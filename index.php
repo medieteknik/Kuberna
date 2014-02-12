@@ -26,6 +26,15 @@ $data = json_decode($datafile, true);
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta http-equiv="cleartype" content="on">
 
+		<!-- OG tags -->
+		<!-- <meta property="og:url" content="http://medieteknik.nu/kuberna" /> -->
+		<meta property="og:title" content="Kuberna - Medietekniksektionens årliga pris" />
+		<meta property="og:description" content="Kuberna är ett årligt tvådelat pris som delas ut till studenter vid Civilingenjör i medieteknik-programmet på Linköpings Universitet." />
+		<meta property="og:image" content="http://medieteknik.nu/kuberna/web/img/ogimg.png" />
+		<meta property="og:image:width" content="555" />
+		<meta property="og:image:height" content="238" />
+
+
 		<!-- CSS files -->
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="web/css/style.css" />
