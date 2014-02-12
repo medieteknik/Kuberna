@@ -1,0 +1,6 @@
+/*
+	HEJE!
+	Den här CSSen är komprimerad och skriven i Less. Om du vill se orginalfilen, gå till
+	./style.less och kika! Less är nice va.
+*/
+@font-face{font-family:'OpenSansExtraboldItalic';font-style:normal;font-weight:400;src:url('../font/OpenSans-ExtraboldItalic.eot');src:url('../font/OpenSans-ExtraboldItalic.eot?#iefix') format('eot'),url('../font/OpenSans-ExtraboldItalic.svg') format('svg'),url('../font/OpenSans-ExtraboldItalic.woff') format('woff'),url('../font/OpenSans-ExtraboldItalic.ttf') format('truetype')}body{background-color:#fafafa}h1,h2{text-align:center;font-family:'OpenSansExtraboldItalic';text-transform:uppercase;padding:100px 0;-webkit-transform:rotate(-12deg);-ms-transform:rotate(-12deg);transform:rotate(-12deg)}h1 small,h2 small{color:rgba(0,0,0,0.3)}.title{color:#fff;overflow:hidden;margin:20px 0}.title#gray{background-color:#a6a6a6}.title#orange{background-color:#ff7d00}.title#black{background-color:#111;margin-bottom:0}.title#black small{color:rgba(255,255,255,0.7)}.margin{margin:30px 0}.nominees .row{margin-top:20px}.nominees img{margin-top:20px}

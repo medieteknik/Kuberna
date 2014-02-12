@@ -28,10 +28,11 @@ $data = json_decode($datafile, true);
 
 		<!-- CSS files -->
 		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" />
-		<link rel="stylesheet/less" type="text/css" href="web/css/style.less" />
+		<link rel="stylesheet" href="web/css/style.css" />
+		<!-- <link rel="stylesheet/less" type="text/css" href="web/css/style.less" />-->
 
 		<!-- load less -->
-		<script src="web/js/less.js" type="text/javascript"></script>
+		<!-- <script src="web/js/less.js" type="text/javascript"></script> -->
 	</head>
 	<body>
 		<!--[if lt IE 7]>
