@@ -49,7 +49,7 @@ $data = json_decode($datafile, true);
 						Civilingenjör i medieteknik-programmet på Linköpings Universitet.
 					</p>
 					<p>
-						Priset består av två kuber – en grå för teknisk prestation och en orange
+						Priset består av två kuber – en grå för teknisk excellens och en orange
 						för kreativitet. Nytt för i år är att du som medlem i sektionen kan rösta
 						på det bidrag du tycker ska vinna.
 					</p>
@@ -234,7 +234,7 @@ $data = json_decode($datafile, true);
 									Grå kuben
 								</h3>
 								<p>
-									Välj vilket bidrag du tycker ska vinna för <strong>teknisk prestation</strong>.
+									Välj vilket bidrag du tycker ska vinna för <strong>teknisk excellens</strong>.
 								</p>
 								<ul class="list-unstyled">
 									<?php

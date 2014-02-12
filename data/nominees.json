@@ -1,12 +1,38 @@
 {
 	"gray": [
 		{
+			"name":"Castafiore",
+			"type":"WebGL-visualisering för Spotify",
+			"who":"Emil Axelsson",
+			"id":"castafiore",
+			"link":"http://emilaxelsson.se/posts/2014-01-08-Castafiore-an-audio-visualizer-for-Spotify",
+			"linktext":"Läs mer",
+			"nomination":"Castafiore är skriven i JavaScript och hon tror att hon är artistisk och duktig när hon skvätter färger i takt till musiken. Hon använder GLSL för att få vattenfärgen att rinna ner och blandas. Hon är egentligen inte så musikalisk utan mer bara hetsig och enspårig och tittar på hur frekvensspekrat förändras från frame till frame."
+		},
+		{
+			"name":"The Krektus Crash",
+			"type":"Spel",
+			"who":"Andreas Lindgren, Axel Brinkeby, Henrietta Rydfalk, Eleonora Kolesnikova",
+			"id":"krektus",
+			"link":"http://brinkeby.se/KrektusCrash.jar",
+			"linktext":"Ladda ned spelet",
+			"nomination":"Spelet går ut på att man som spelare styr en liten alien och med hjälp utav olika attacker försvara dennes rymdskepp. Eftersom det aldrig kommer något moderskepp och räddar den stackars varelsen så har spelet inget \"win-state\" utan det går ut på att få en så hög highscore som möjligt. Projektet gjordes i kursen TNM040 koma, alltså låg fokus på att göra ett användargränssnitt."
+		},
+		{
 			"name":"Mote.fm",
 			"type":"Webb- och Spotifyapp",
 			"who":"Klas Eskilson, Erik Larsson, Daniel Rönnkvist, Einar Sandberg",
 			"id":"mote",
-			"link":"http://mote.fm",
-			"nomination":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+			"link":"https://vimeo.com/86263314",
+			"linktext":"Se en film",
+			"nomination":"Mote.fm är en webb- och Spotify-app för att lösa konflikter som uppstår på fester runt vilken musik som skall ligga i spotifys kölista. Genom att flytta väljandet av musik till handhållna enheter behöver ingen brottas framför datorn och ingen kan fuska genom att lägga sin egna låt först. Tillsammans kan gästerna föreslå och rösta på vilka låtar de helst vill höra. Med Mote.fm har du tillgång och kan söka i hela Spotifys musikbibliotek. När du lägger till en låt eller röstar på någon annans låt uppdateras Mote.fm automatiskt utan att du som användare måste uppdatera hemsidan."
+		},
+		{
+			"name":"Photomosaic",
+			"type":"Matlabapplikation",
+			"who":"Axel Kinner, Alexander Svensson",
+			"id":"photo",
+			"nomination":"Genom att använda snabbheten i en bilddatabas så kan man snabbt och enkelt skapa en mosiac-bild genom att jämföra varje subbild i originalbild man vill skapa en mosaic-bild av, mot de som finns i bilddatabasen. Den mest liknande bilden i databasen ersätter sedan varje subbild i originalbilden. Programmet använder sig av PCA-kompression för att minska andelen data som behövs för att spara bildbeskrivningen i databasen. Programmet kan använda sig av en quad-tree search för att hitta subbilderna som skall ersättas, istället för att använda en fixt storlek på subbilden, se bild."
 		},
 		{
 			"name":"Physically based simulation of fire",
@@ -44,14 +70,13 @@
 			"nomination":"Tube Wars är en fps-shooter där man spelar 2 vs. 2 på en kompakt och högintensiv arena. Spelet är skapat i Unity Engine. Alla modeller, texturer, ljud (utom ambient-ljudet), partikeleffekter samt närverket har vi skapat själva. Detta är ett projekt som knyter samman medieteknikprogrammet på ett bra sätt då allt ifrån programmering, förståelse för en grafikmotor samt konstnärligt artistisk anda är ett måste!"
 		},
 		{
-			"name":"Mote.fm",
-			"type":"Webb- och Spotifyapp",
-			"type":"Webb- och Spotifyapp",
-			"who":"Klas Eskilson, Erik Larsson, Daniel Rönnkvist, Einar Sandberg",
-			"id":"mote",
-			"link":"https://vimeo.com/86263314",
-			"linktext":"Se en film",
-			"nomination":"Mote.fm är en webb- och Spotify-app för att lösa konflikter som uppstår på fester runt vilken musik som skall ligga i spotifys kölista. Genom att flytta väljandet av musik till handhållna enheter behöver ingen brottas framför datorn och ingen kan fuska genom att lägga sin egna låt först. Tillsammans kan gästerna föreslå och rösta på vilka låtar de helst vill höra. Med Mote.fm har du tillgång och kan söka i hela Spotifys musikbibliotek. När du lägger till en låt eller röstar på någon annans låt uppdateras Mote.fm automatiskt utan att du som användare måste uppdatera hemsidan."
+			"name":"WebGL Procedural Water",
+			"type":"Reflekterande vattenyta i WebGL",
+			"who":"Jonas Zeitler",
+			"id":"water",
+			"link":"http://jonaszeitler.se/webgl-procedural-water/",
+			"linktext":"Se en demo",
+			"nomination":"En reflekterande/refrakterande vattenyta i webGL. Målet med projektet var att skapa någon grafikkomponent och undvika att använda förberäknade meshar/texturer (och istället generera dessa procedurellt)."
 		}
 	],
 	"orange": [
@@ -80,7 +105,7 @@
 			"id":"robsven",
 			"link":"http://www.youtube.com/watch?v=Hiiruh8nHKQ",
 			"linktext":"Se filmen",
-			"nomination":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+			"nomination":"Med undantag från viss texturering är all modellering, animering, ljudläggning samt musik producerad av gruppen. Mycket av det producerade materialet är skapat direkt utifrån gruppmedlemmarnas egna idéer. Exempelvis är roboten modellerad helt utan att följa någon mall, även om ögonen inspirerats från Wall-E. Mycket tid har lagts på kreativa detaljer både för visualisering och ljudproduktion. Filmen är väldigt raffinerad med tanke på de fem låtarna som skrevs till filmen varav en platsade och vi skapade nästintill 100 modellerade objekt varav ca 70 kvalificerades."
 		}
 
 	]
