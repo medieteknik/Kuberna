@@ -1,6 +1,6 @@
 <?php
 // avoid direct call to this file
-if(!defined('REQUIRE_LOGIN')) header('Location: ./');
+if(!defined('REQUIRE_LOGIN')) header('Location: index.php');
 
 // post or no post? logged in? voted before?
 if(isset($_POST['vote']) && phpCAS::isAuthenticated() && !has_voted(phpCAS::getUser(), $sysdb))
@@ -15,7 +15,7 @@ if(isset($_POST['vote']) && phpCAS::isAuthenticated() && !has_voted(phpCAS::getU
 
 	// run query
 	if($sysdb->query($query))
-		header('Location: ./?thanks#black');
+		header('Location: index.php?thanks#black');
 	else
-		header('Location: ./?error#black');
+		header('Location: index.php?error#black');
 }

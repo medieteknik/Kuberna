@@ -239,7 +239,7 @@ $data = json_decode($datafile, true);
 					</h2>
 				</div>
 				<div class="container">
-					<form action="./" method="post">
+					<form action="index.php" method="post">
 						<div class="row">
 							<div class="col-sm-4">
 								<h3>
