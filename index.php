@@ -5,7 +5,7 @@ define('REQUIRE_LOGIN', true);
 // load system
 require_once 'system.php';
 // load the vote handler
-require_once 'vote.php';
+// require_once 'vote.php';
 
 // get nominee data
 $datafile = file_get_contents('data/nominees.json');
@@ -185,9 +185,9 @@ $data = json_decode($datafile, true);
 				?>
 				<div class="title" id="black">
 					<h2>
-						Rösta!<br />
+						Röstningen är stängd!<br />
 						<small>
-							Först måste du <a href="?login#black" class="btn btn-info">Logga in!</a>
+							Har du röstat? Se vad du röstade på genom att <a href="?login#black" class="btn btn-info">Logga in!</a>
 						</small>
 					</h2>
 				</div>
@@ -232,96 +232,13 @@ $data = json_decode($datafile, true);
 				?>
 				<div class="title" id="black">
 					<h2>
-						Rösta nu!<br />
+						Röstningen är stängd!<br />
 						<small>
-							Inloggad som <?php echo phpCAS::getUser(); ?> <a href="?logout" class="btn btn-info">Logga ut!</a>
+							Hemskt ledsen, men det går inte längre att rösta på Kuberna 2014. Tack för visat intresse!
 						</small>
 					</h2>
 				</div>
-				<div class="container">
-					<form action="index.php" method="post">
-						<div class="row">
-							<div class="col-sm-4">
-								<h3>
-									Grå kuben
-								</h3>
-								<p>
-									Välj vilket bidrag du tycker ska vinna för <strong>teknisk excellens</strong>.
-								</p>
-								<ul class="list-unstyled">
-									<?php
-									foreach ($data['gray'] as $nominee) {
-										?>
-										<li>
-											<label>
-												<input type="radio" name="gray" value="<?php echo $nominee['id']; ?>">
-												<strong><?php echo $nominee['name']; ?></strong>
-												<em><?php echo $nominee['type']; ?></em>
-											</label>
-										</li>
-										<?php
-									}
-									?>
-									<li>
-										<label>
-											<input type="radio" name="gray" value="" checked>
-											<strong>Blankt</strong>
-											<em>Välj denna om du vill rösta blankt.</em>
-										</label>
-									</li>
-								</ul>
-							</div>
-							<div class="col-sm-4">
-								<h3>
-									Orange kuben
-								</h3>
-								<p>
-									Välj vilket bidrag du tycker ska vinna för <strong>kreativitet</strong>.
-								</p>
-								<ul class="list-unstyled">
-									<?php
-									foreach ($data['orange'] as $nominee) {
-										?>
-										<li>
-											<label>
-												<input type="radio" name="orange" value="<?php echo $nominee['id']; ?>">
-												<strong><?php echo $nominee['name']; ?></strong>
-												<em><?php echo $nominee['type']; ?></em>
-											</label>
-										</li>
-										<?php
-									}
-									?>
-									<li>
-										<label>
-											<input type="radio" name="orange" value="" checked>
-											<strong>Blankt</strong>
-											<em>Välj denna om du vill rösta blankt.</em>
-										</label>
-									</li>
-								</ul>
-							</div>
-							<div class="col-sm-4">
-								<h3>
-									Skicka!
-								</h3>
-								<p>
-									Tänk på att du inte kan ångra dig och att du bara har en röst. Endast MT-studenters röster
-									räknas.
-								</p>
-								<p>
-									<input type="submit" value="Rösta!" name="vote" class="btn btn-primary" />
-								</p>
-								<p>
-									<small>
-										När du röstar accepterar du att vi lagrar ditt LiU-id.
-									</small>
-								</p>
-							</div>
-						</div>
-					</form>
-				</div><!-- end .container -->
-			<?php
+				<?php
 			} // else phpcas auth check
 			?>
 			<div class="container">
